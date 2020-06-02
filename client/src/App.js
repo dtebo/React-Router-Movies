@@ -4,6 +4,7 @@ import {Route, Switch} from 'react-router-dom';
 import axios from 'axios';
 
 import MovieList from './Movies/MovieList';
+import Movie from './Movies/Movie';
 import SavedList from './Movies/SavedList';
 
 const App = () => {
@@ -34,6 +35,9 @@ const App = () => {
       <Switch>
         <Route exact path="/">
           <MovieList movies={movieList} />
+        </Route>
+        <Route path="/movies/:id">
+          <Movie />
         </Route>
       </Switch>
     </div>
