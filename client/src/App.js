@@ -3,6 +3,8 @@ import {Route, Switch} from 'react-router-dom';
 
 import axios from 'axios';
 
+import './App.css';
+
 import MovieList from './Movies/MovieList';
 import Movie from './Movies/Movie';
 import SavedList from './Movies/SavedList';
