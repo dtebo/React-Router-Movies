@@ -43,7 +43,7 @@ body {
 .saved-movie {
   margin: 0 10px;
 }
-.saved-active {
+#root a.saved-active {
   color: blue;
   border: 1px solid grey;
   padding: 5px;
