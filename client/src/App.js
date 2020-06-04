@@ -32,8 +32,8 @@ const App = () => {
       return item.id === movie.id;
     });
 
-    if(existingMovies.length > 0) return;
-    
+    if(existingMovies.length > 0) return; // if the movie exists, don't add it again
+
     setSavedList([...savedList, movie]);
   };
 
