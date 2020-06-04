@@ -12,7 +12,7 @@ import SavedList from './Movies/SavedList';
 const App = () => {
   const [savedList, setSavedList] = useState([]);
   const [movieList, setMovieList] = useState([]);
-
+  
   useEffect(() => {
     const getMovies = () => {
       axios
@@ -28,6 +28,12 @@ const App = () => {
   }, []);
 
   const addToSavedList = movie => {
+    const existingMovies = savedList.filter((item, index) => {
+      return item.id === movie.id;
+    });
+
+    if(existingMovies.length > 0) return;
+    
     setSavedList([...savedList, movie]);
   };
 
