@@ -6,7 +6,7 @@ import MovieCard from './MovieCard';
 
 const Movie = (props) => {
   const [movie, setMovie] = useState();
- 
+ console.log(props);
   const params = useParams();
 
   const id = Number(params.id);
